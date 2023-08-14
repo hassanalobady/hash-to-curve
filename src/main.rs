@@ -26,7 +26,7 @@ pub fn map_to_curve(msg: &[u8]) -> G1Projective {
 let base_point: G1Projective = G1Projective::generator();
 
 let point_on_curve: G1Projective = base_point * scalar;
-
+// we done this
 point_on_curve
  
 }
@@ -44,7 +44,7 @@ fn verify_commitment(commitment: G1Projective, x: Scalar, r: Scalar, commitment_
   let expected_commitment: G1Projective = generate_commitment(x, r, commitment_base);
   commitment == expected_commitment
 }
-
+// we need to update this
 fn main() {
   let mut rng = rand::thread_rng();
   let x: Scalar = Scalar::random(&mut rng);
@@ -66,7 +66,7 @@ fn main() {
   println!("Randomness x (in byte hex format): {}", x.to_bytes().encode_hex::<String>());
   println!("Commitment (in byte hex format): {}", commitment.to_affine().to_bytes().encode_hex::<String>());
 }
-
+// how to add main funciton 
 #[cfg(test)]
 mod tests {
   use super::*;
