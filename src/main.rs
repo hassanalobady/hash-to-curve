@@ -4,7 +4,7 @@ use group::{Curve, GroupEncoding};
 use sha2::{Digest, Sha256};
 use hex::{self, ToHex};
 
-
+//Hello
 pub fn map_to_curve(msg: &[u8]) -> G1Projective {
   // Hash the input message using SHA-256 to obtain a scalar
 
