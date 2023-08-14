@@ -9,7 +9,7 @@ pub fn map_to_curve(msg: &[u8]) -> G1Projective {
   // Hash the input message using SHA-256 to obtain a scalar
 
  let mut hasher: Sha256 = Sha256::new();
-
+// here we can change the function 
  hasher.update(msg);
 
   let hash_result: bls12_381_plus::elliptic_curve::generic_array::GenericArray<u8, typenum::UInt<typenum::UInt<typenum::UInt<typenum::UInt<typenum::UInt<typenum::UInt<typenum::UTerm, typenum::B1>, typenum::B0>, typenum::B0>, typenum::B0>, typenum::B0>, typenum::B0>> = hasher.finalize();
